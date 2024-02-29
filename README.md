@@ -1,26 +1,10 @@
-# arduino-ibustrx
+# e39-bluetooth-controller
 
-Arduino library for sending and receiving messages over the BMW infotainment bus (IBUS).
+This software allows you to control your phone music/video player throught the BMW E39 steering wheel multimedia buttons using the arduino-ibustrx library.
 
+# Setup
 
-### IBUS Introduction
-
-IBUS, or infotainment bus, is a BMW-specific controller network that enables infotainment and convenience systems to exchange data with each other. 
-
-Every time you interact with the vehicle, whether it be pressing a button on the steering wheel, opening a window or turning on the AC, data gets exchanged over the IBUS. In addition to that the IBUS is also used to exchange diagnostic messages and read fault codes.
-
-The IBUS can be found on most BMW models produced between the late 90s and early 00s (most notably on the E46 3-series and E39 5-series).
-
-##### Cool, now what can I do with this?
-*Basic projects:* interpreting steering wheel control commands, remote keyfob instructions and broadcast messages like road speed and engine RPM.
-
-*Intermediate projects:* triggering stuff based on state changes (door/window has been opened/closed, wipers have been turned to level two, a key has been inserted into the ignition, left turn signal is on, etc.).
-
-*Advanced projects:* manipulating inputs and outputs, for example: emulating a press of the "lock/unlock" button in order to automatically unlock the doors after the key has been removed (*a feature that for some reason isn't available on the E46!*).
-
----
-
-### Installation
+I'm using a Arduino Nano and a CSR8645 bluetooth board. To connect the Arduino to the vehicle IBUS in order to capture/send the correct messages you will need a LIN Transceiver like a MCP2025, I uploaded a schematic for a simple working circuit.
 
 ##### Arduino library manager
 This library can be found in the Arduino library manager. Simply search for *IbusTrx* and click install.
